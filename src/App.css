@@ -1,3 +1,6 @@
+body {
+  font-family: Arial, Verdana, sans-serif;
+}
 .App {
   text-align: center;
 }
@@ -34,5 +37,25 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+.content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content button {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.all-labels > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+@media print {
+  button {
+    display: none;
   }
 }
