@@ -130,12 +130,11 @@ export const Label10x10 = () => {
     return splitStr.join(" ");
   };
   const diplayProductCharacteristic = () => {
-    let result;
     if (product.block2.product_Info.Product_Characteristic) {
       const splitProductInfo = product.block2.product_Info.Product_Characteristic.split(
         "|"
       );
-      result = splitProductInfo.map((e, i) => {
+      const result = splitProductInfo.map((e, i) => {
         if (splitProductInfo.indexOf(e) !== 0) {
           return (
             <span key={i}>
@@ -145,8 +144,8 @@ export const Label10x10 = () => {
           );
         }
       });
+      return result;
     }
-    return result;
   };
   // Collection Date
   const [collectionDate, setCollectionDate] = useState(new Date(Date.now()));

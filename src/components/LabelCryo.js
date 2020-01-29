@@ -109,12 +109,11 @@ export const LabelCryo = () => {
     return splitStr.join(" ");
   };
   const diplayProductCharacteristic = () => {
-    let result;
     if (product.block2.product_Info.Product_Characteristic) {
       const splitProductInfo = product.block2.product_Info.Product_Characteristic.split(
         "|"
       );
-      result = splitProductInfo.map((e, i) => {
+      const result = splitProductInfo.map((e, i) => {
         if (splitProductInfo.indexOf(e) !== 0) {
           return (
             <span key={i}>
@@ -124,8 +123,8 @@ export const LabelCryo = () => {
           );
         }
       });
+      return result;
     }
-    return result;
   };
   // Delete Hour Of Date
   const deleteHourDate = d => {
