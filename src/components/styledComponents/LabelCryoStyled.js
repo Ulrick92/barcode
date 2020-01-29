@@ -24,9 +24,9 @@ export const LabelInner = styled.div`
   display: grid;
   grid-template-columns: 50% 50%;
   height: 132.283px;
-  /* border: 1px solid #000; */
+  border: 1px solid #000;
   ${Block}:last-child {
-    /* border-left: 1px solid #000; */
+    border-left: 1px solid #000;
   }
 `;
 export const Din = styled.div`
